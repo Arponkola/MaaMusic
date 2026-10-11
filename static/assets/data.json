@@ -1,10 +1,10 @@
 [
-    {"id" : 1, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "prices" : "From ₹20/hour | ₹150/day"},
-    {"id" : 2, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "prices" : "From ₹20/hour | ₹150/day"},
-    {"id" : 3, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "prices" : "From ₹20/hour | ₹150/day"},
-    {"id" : 4, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "prices" : "From ₹20/hour | ₹150/day"},
-    {"id" : 5, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "prices" : "From ₹20/hour | ₹150/day"},
-    {"id" : 6, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "prices" : "From ₹20/hour | ₹150/day"},
-    {"id" : 7, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "prices" : "From ₹20/hour | ₹150/day"},
-    {"id" : 8, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "prices" : "From ₹20/hour | ₹150/day"}
+    {"id" : 1, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 2, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 3, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 4, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 5, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 6, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 7, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 8, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"}
 ]
