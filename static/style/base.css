@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100dvh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(116, 5, 5);
+    color: #eee;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: fixed;
+    z-index: 10;
+}
+
+header .options {
+    display: flex;
+    gap: 20px;
+    a {
+        text-decoration: none;
+        color: #eee;
+    }
+}
+
+header .options .nav {
+    position: relative;
+}
+
+header .options .nav.active {
+    color: yellow;
+}
+
+header .options .nav.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(228, 228, 15);
+    bottom: -3px;
+    transform: translateX(-100%);
+    transition: width 0.2s linear;
+}
+
+header .options .nav::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(228, 228, 15);
+    bottom: -3px;
+    transform: translateX(-100%);
+    transition: width 0.2s linear;
+}
+
+header .options .nav:hover::after {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+main .nav-section {
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .nav-section.active {
+    display: flex;
+}
+
+main #home .hero-section {
+    width: 100%;
+    height: 60%;
+    background-image: url("../images/hero_section_image_.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    color: #eee;
+}
+
+
+.hero-section .content {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 1)
+    );
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 30px;
+    gap: 10px;
+}
+
+.search-box {
+    width: 50%;
+    position: relative;
+    input {
+        width: 100%;
+        max-width: 450px;
+        min-width: 100px;
+        padding: 13px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+    }
+
+    button {
+        position: absolute;
+        padding: 5px;
+        transform: translate(-115%, 23%);
+        border: 1px solid black;
+        background-color: rgb(116, 5, 5);
+        color: #eee;
+        border-radius: 20px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+.gold-heading {
+    background: linear-gradient(to right, #D4AA04, #BA9503);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+    font-size: xxx-large;
+}
+
+#show-hide {
+    display: none;
+    font-size: xx-large;
+    border: none;
+    background-color: rgba(116, 5, 5, 0.541);
+    color: white;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.action-logos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    padding-left: 7%;
+}
+
+.action-logos .logo-text-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-logos .logo {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: rgba(238, 213, 182, 0.705);
+    border: 1px solid rgb(229, 195, 153);
+    border-radius: 10px;
+}
+
+#products-shows-header {
+    width: 95%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#product-select-option {
+    width: 95%;
+    align-self: center;
+    display: flex;
+    gap: 10px;
+}
+
+#product-select-option .select-option {
+    width: 70px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: rgb(48, 47, 47);
+    background-color: white;
+}
+
+#product-select-option .select-option:hover {
+    border-color: rgba(116, 5, 5, 0.541);
+    background-color: #eee;
+    color: black;
+}
+
+#product-select-option .select-option.active {
+    background-color: rgb(116, 5, 5);
+    color: gold;
+}
+
+#products {
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+}
+
+#products-grid-container {
+    width: 95%;
+    display: grid;
+    border: 1px solid #aaa;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-height: 90dvh;
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#products-grid-container h1 {
+    background-color: #D4AA04;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-container {
+    border: 2px solid bisque;
+    border-radius: 10px;
+    transform: scale(100%);
+    cursor: pointer;
+    transition: transform 0.2s linear;
+}
+
+.product-container:hover {
+    transform: scale(105%);
+    box-shadow: 2px 2px 5px 5px rgba(255, 228, 196, 0.623);
+}
+
+.product-container-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.product-info {
+    padding-left: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width : 580px) { /* 580px */
+    .options {
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        height: 100%;
+        background-color: rgba(116, 5, 5, 1);
+        opacity: 0;
+        width: 0%;
+        padding: 30px;
+        transition: width 0.2s linear, opacity 0.2s linear;
+    }
+
+    .options.active {
+        width: 60%;
+        opacity: 1;
+    }
+
+    #options .nav {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    #options .nav::after {
+        width: 0%;
+        right: -100%;
+    }
+
+    #options .nav:hover::after {
+        width: 100%;
+    }
+    
+    #options .nav.active::after {
+        width: 100%;
+        transition: width 0.2s linear;
+    }
+
+    #show-hide {
+        display: flex;
+    }
+}
