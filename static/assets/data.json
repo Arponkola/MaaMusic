@@ -1,10 +1,10 @@
 [
-    {"id" : 1, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
-    {"id" : 2, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
-    {"id" : 3, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
-    {"id" : 4, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
-    {"id" : 5, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
-    {"id" : 6, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
-    {"id" : 7, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"},
-    {"id" : 8, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "box", "imagePath" : "./static/images/professional-services.png"}
+    {"id" : 1, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "Light", "imagePath" : "./static/images/hero_section_image_.png"},
+    {"id" : 2, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "Light", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 3, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "Light", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 4, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "Box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 5, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "Box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 6, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "Box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 7, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "Box", "imagePath" : "./static/images/professional-services.png"},
+    {"id" : 8, "name" : "Box & Storage", "info" : "Storage Boxes & Containers", "category" : "Box", "imagePath" : "./static/images/professional-services.png"}
 ]

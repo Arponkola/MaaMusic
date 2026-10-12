@@ -289,12 +289,17 @@ main #home .hero-section {
     transform: scale(100%);
     cursor: pointer;
     transition: transform 0.2s linear;
+    h3 {
+        font-size: 22px;
+        transition: font-size 0.2s linear;
+    }
 }
 
 .product-container:hover {
     transform: scale(105%);
     h3 {
         color: rgb(161, 13, 13);
+        font-size: 23px;
     }
     box-shadow: 2px 2px 5px 5px rgba(255, 228, 196, 0.623);
 }

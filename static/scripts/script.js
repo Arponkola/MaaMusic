@@ -9,24 +9,56 @@ const modalForm = document.getElementById("modal-content");
 const productSelect = document.getElementById("product-select-option");
 const optionSelect = productSelect.querySelectorAll(".select-option")
 const productGridContainer = document.getElementById("products-grid-container");
+const searchLabel = document.getElementById("search-label");
 let allProducts = [];
 
 fetch("./static/assets/data.json")
 .then(res=>res.json())
 .then((data)=>{
     allProducts = data;
+    productGridContainer.innerHTML = '';
+    allProducts.forEach((element)=>{
+        productGridContainer.innerHTML += `
+            <div class="product-container" data-name="${element.name}" data-info="${element.info}" data-category="${element.category}" data-image="${element.imagePath}">
+                <img src="${element.imagePath}" class="product-container-image"/>
+                <div class="product-info">
+                    <h3>${element.name}</h3>
+                    <small>${element.info}</small>
+                </div>
+            </div>
+        `
+    });
 })
 .catch((err)=>{
-    console.log(err);
     allProducts = []
 })
 
 function performSearch(e) {
     //search logic
     const searchInputValue = searchInput.value.trim();
-    console.log(e.target);
     if(!searchInputValue || searchInputValue === "") {
         return;
+    }
+
+    searchLabel.innerHTML = `<p style="text-alignL center">Search By '${searchInputValue}'</p>`
+    productGridContainer.innerHTML = ''
+    allProducts.forEach((element)=>{
+        const concatString = element.category + " " + element.name + " " + element.info;
+        if(concatString.toLowerCase().includes(searchInputValue)) {
+            productGridContainer.innerHTML += `
+                <div class="product-container" data-name="${element.name}" data-info="${element.info}" data-category="${element.category}" data-image="${element.imagePath}">
+                    <img src="${element.imagePath}" class="product-container-image"/>
+                    <div class="product-info">
+                        <h3>${element.name}</h3>
+                        <small>${element.info}</small>
+                    </div>
+                </div>
+            `
+        }
+    });
+
+    if(productGridContainer.innerHTML === '') {
+        productGridContainer.innerHTML = '<h1 style="text-align:center;">No Result Found.</h1>';
     }
 
     window.location.href='#products';
@@ -121,15 +153,14 @@ function getProducts(option) {
     const p = []
     if(option=="boxes") {
         allProducts.forEach((element)=>{
-            console.log(element)
-            if(element.category  === "box") {
+            if(element.category.toLowerCase()  === "box") {
                 p.push(element);
             }
         })
         return p;
     } else if(option=="lights") {
         allProducts.forEach((element)=>{
-            if(element.category  === "light") {
+            if(element.category.toLowerCase()  === "light") {
                 p.push(element);
             }
         })
@@ -151,7 +182,7 @@ for(let i=0; i<optionSelect.length; i++) {
         const pro = optionSelect.item(i).getAttribute("data-op");
         const ProductsGeted = getProducts(pro);
         if(ProductsGeted.length == 0) {
-            productGridContainer.innerHTML = '<h1 style="text-align:center;">No Item Present</h1>'
+            productGridContainer.innerHTML = '<h1 style="text-align:center;">No Result Found.</h1>'
             productGridContainer.style.overflowY = "hidden";
             return;
         }
@@ -161,7 +192,7 @@ for(let i=0; i<optionSelect.length; i++) {
         ProductsGeted.forEach(element => {
             p += `
                 <div class="product-container" data-name="${element.name}" data-info="${element.info}" data-category="${element.category}" data-image="${element.imagePath}">
-                    <img src="./static/images/hero_section_image_.png" class="product-container-image"/>
+                    <img src="${element.imagePath}" class="product-container-image"/>
                     <div class="product-info">
                         <h3>${element.name}</h3>
                         <small>${element.info}</small>
