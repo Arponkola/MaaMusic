@@ -186,6 +186,7 @@ for(let i=0; i<optionSelect.length; i++) {
             productGridContainer.style.overflowY = "hidden";
             return;
         }
+        searchLabel.innerHTML = ''
         productGridContainer.style.overflowY = "scroll";
         let p = ''
         productGridContainer.innerHTML = ''
